@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function toggleDarkModeModal(show) {
         if (show) {
             darkModeModalBackdrop.classList.add("show");
-            document.body.style.overflow = 'hidden'; // Prevent scrolling main content
+            document.body.style.overflow = 'hidden'; 
         } else {
             darkModeModalBackdrop.classList.remove("show");
             document.body.style.overflow = '';
@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     settingsTrigger.addEventListener("click", () => toggleDarkModeModal(true));
     closeModalBtn.addEventListener("click", () => toggleDarkModeModal(false));
     darkModeModalBackdrop.addEventListener("click", (e) => {
-        // Close when clicking the backdrop, but not the modal itself
+        
         if (e.target.id === "darkModeModalBackdrop") {
             toggleDarkModeModal(false);
         }
     });
 
-    // --- 2. Dark Mode Functionality (Now inside the Modal) ---
+    
     const themeCheckbox = document.getElementById("themeCheckbox");
     const modeLabel = document.getElementById("modeLabel");
     const body = document.body;
@@ -161,3 +161,4 @@ document.addEventListener("DOMContentLoaded", () => {
     dateDisplay.textContent = today.toLocaleDateString();
 
 });
+
