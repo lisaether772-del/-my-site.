@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. DARK MODE MODAL POP-UP LOGIC (New Focus) ---
+   
     const settingsTrigger = document.getElementById("settingsTrigger");
     const darkModeModalBackdrop = document.getElementById("darkModeModalBackdrop");
     const closeModalBtn = document.getElementById("closeModalBtn");
     
-    // Function to open/close the Dark Mode Modal
+    
     function toggleDarkModeModal(show) {
         if (show) {
             darkModeModalBackdrop.classList.add("show");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Event listeners for the Dark Mode Modal
+    
     settingsTrigger.addEventListener("click", () => toggleDarkModeModal(true));
     closeModalBtn.addEventListener("click", () => toggleDarkModeModal(false));
     darkModeModalBackdrop.addEventListener("click", (e) => {
@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeLabel = document.getElementById("modeLabel");
     const body = document.body;
 
-    // Load saved preference or default to dark
-    // The checkbox state is set here based on the saved theme
+    
     if (localStorage.getItem("theme") === "light") {
         body.classList.add("light-mode");
         themeCheckbox.checked = true; 
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // --- 3. Dynamic Time Greeting ---
+    
     const timeGreeting = document.getElementById("timeGreeting");
     const hour = new Date().getHours();
     let text = "";
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     timeGreeting.textContent = text;
 
 
-    // --- 4. Edit Job Title ---
+    
     const editBtn = document.getElementById("editJobBtn");
     const jobTitle = document.getElementById("jobTitle");
 
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // --- 5. Toggle Skills ---
+    
     const toggleSkillsBtn = document.getElementById("toggleSkillsBtn");
     const skillsList = document.getElementById("skillsList");
 
@@ -90,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // --- 6. Quote Generator ---
+    
     const quoteBtn = document.getElementById("quoteBtn");
     const quoteDisplay = document.getElementById("quoteDisplay");
     const quotes = [
@@ -106,14 +105,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // --- 7. Form Validation ---
+    
     const contactForm = document.getElementById("contactForm");
     const nameInput = document.getElementById("nameField");
     const emailInput = document.getElementById("emailField");
     const msgBox = document.getElementById("msgBox");
     const counter = document.getElementById("counter");
 
-    // Character Counter
+    
     msgBox.addEventListener("input", () => {
         const remaining = 200 - msgBox.value.length;
         counter.textContent = remaining;
@@ -123,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         let valid = true;
         
-        // Clear errors
+        
         document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
         document.querySelectorAll('input, textarea').forEach(el => el.style.borderColor = 'var(--border)');
 
@@ -156,8 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
         input.style.borderColor = "#ef4444";
     }
 
-    // Date Footer
+    
     const dateDisplay = document.getElementById("dateDisplay");
     const today = new Date();
     dateDisplay.textContent = today.toLocaleDateString();
+
 });
