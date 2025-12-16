@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lois Garcia | Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">ACTIVITY 5</div> 
+        </div>
+        <nav class="nav-center">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#message" class="nav-link">Message</a>
+        </nav>
+        <div class="nav-right">
+            <button class="settings-trigger-btn" id="settingsTrigger">
+                <i class="fas fa-gear"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="modal-backdrop" id="darkModeModalBackdrop">
+        <div class="dark-mode-modal" id="darkModeModal">
+            <div class="modal-header">
+                <h2>Appearance Settings</h2>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="setting-group">
+                <div class="setting-item">
+                    <span>Dark Mode Toggle</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="themeCheckbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-status">
+                    <small id="modeLabel">Dark Mode Active</small>
+                </div>
+            </div>
+            
+            <p class="modal-info">Appearance changes apply immediately.</p>
+        </div>
+    </div>
+    
+    <div class="main-layout">
+
+        <aside class="sidebar">
+            
+            <div class="profile-container" id="home">
+                <div class="img-wrapper">
+                    <img src="Garcia.PNG" alt="Lois Garcia" class="profile-img">
+                    <div class="status-indicator"></div>
+                </div>
+                
+                <h1 id="greetingName">Lois Garcia</h1>
+                
+                <div class="job-container">
+                    <span id="jobTitle">Web Developer</span>
+                    <button id="editJobBtn" class="icon-btn" title="Edit Title">✏️</button>
+                </div>
+
+                <p class="bio-text">
+                    Socializing, sleeping, and coding. <br>
+                    <span id="timeGreeting"></span>
+                </p>
+            </div>
+            
+            <hr class="divider">
+
+            <div class="skills-section">
+                <div class="section-head">
+                    <h3>Technical Skills</h3>
+                    <button id="toggleSkillsBtn" class="text-btn">Hide</button>
+                </div>
+                <div id="skillsList" class="skills-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Arduino</span>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📧 <a href="mailto:loisgarcia116@gmail.com">loisgarcia116@gmail.com</a></li>
+                    <li>📱 +63 994-724-1142</li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <main class="content-area">
+            
+            <section id="about" class="card">
+                <h2>About Me</h2>
+                <p>
+                    I am Lois Garcia. I am a passionate individual who enjoys socializing and maintaining a balanced lifestyle. 
+                    My core strength lies in my proficiency and dedication to work when provided with clear guidance. 
+                    While I strive for focus, I am currently working on improving my concentration in distracting environments.
+                </p>
+                
+                <div class="quote-wrapper">
+                    <blockquote id="quoteDisplay">
+                        "Click the button below for a random quote."
+                    </blockquote>
+                    <button id="quoteBtn" class="primary-btn">Generate Quote</button>
+                </div>
+            </section>
+
+            <section id="message" class="card">
+                <h2>Message Me</h2>
+                <p class="subtitle">Please be guided that it will take some time to read your message.</p>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nameField">Name</label>
+                        <input type="text" id="nameField" placeholder="Enter your name">
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailField">Email</label>
+                        <input type="email" id="emailField" placeholder="Enter your email">
+                        <small class="error-msg" id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="msgBox">Message</label>
+                        <textarea id="msgBox" maxlength="200" placeholder="Type your message here..."></textarea>
+                        <div class="char-count">Characters left: <span id="counter">200</span></div>
+                        <small class="error-msg" id="msgError"></small>
+                    </div>
+
+                    <button type="submit" class="primary-btn full-width">Send Message</button>
+                </form>
+            </section>
+
+            <footer class="footer">
+                <p>Web Programming 2025 | <span id="dateDisplay"></span></p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
