@@ -1,5 +1,5 @@
 :root {
-    /* DEFAULT DARK COLORS */
+    
     --bg-body: #0f172a;       
     --bg-card: #1e293b;       
     --bg-sidebar: #1e293b;
@@ -286,3 +286,4 @@ textarea { min-height: 120px; resize: vertical; }
     .navbar { justify-content: space-between; }
 
 }
+
